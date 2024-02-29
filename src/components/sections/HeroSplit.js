@@ -6,6 +6,10 @@ import Button from '../elements/Button';
 import Image from '../elements/Image';
 import Modal from '../elements/Modal';
 
+
+//import ContactForm from '../elements/ContactForm';
+
+
 const propTypes = {
   ...SectionSplitProps.types
 }
@@ -79,21 +83,26 @@ class HeroSplit extends React.Component {
             <div className={splitClasses}>
               <div className="split-item">
                 <div className="hero-content split-item-content center-content-mobile reveal-from-top">
+                  <p>
+                  <Image
+                    className="hero-image"
+                    src={require('./../../assets/images/company_logo_2.png')}
+                    alt="Hero"
+                    width={300}
+                    height={150} />
+                  </p>
                   <h1 className="mt-0 mb-16">
                     AI for your organization.
                   </h1>
                   <p className="mt-0 mb-32">
                     Custom AI solutions tailored to your business needs.
                   </p>
-                  <ButtonGroup>
-                    <Button tag="a" color="primary" href="https://cruip.com/" wideMobile>
-                      Pricing and plans
-                    </Button>
-                    <Button tag="a" color="dark" href="https://cruip.com/" wideMobile>
-                      Learn more
-                    </Button>                    
-                  </ButtonGroup>
+
                 </div>
+                <div>
+\
+                </div>
+                
                 <div className="hero-figure split-item-image split-item-image-fill illustration-element-01 reveal-from-bottom">
                   <a
                     data-video="https://player.vimeo.com/video/174002812"
