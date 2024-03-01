@@ -100,7 +100,10 @@ class ContactForm extends React.Component {
             </div>
             <div className="cta-action">
             {this.state.formSubmitted ? (
-                <p>Submitted! We will get in touch with you soon</p>
+              <div>
+                <p>Submitted!</p> 
+                <p>We will get in touch with you soon</p>
+              </div>
               ) :
               (<form onSubmit={this.sendEmail}>
                 <div className="mb-12">
@@ -121,7 +124,7 @@ class ContactForm extends React.Component {
                   <Input
                     type="textarea"
                     label=""
-                    placeholder="Tell us about your project. What are you looking for? Be as specific or as general as you like."
+                    placeholder="Tell us about your organization. What are you looking for? Be as specific or as general as you like."
                     labelHidden />
                 </div>
                 <Button color="primary" wide>Send</Button>
