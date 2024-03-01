@@ -4,11 +4,11 @@ import { SectionSplitProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Image from '../elements/Image';
-import Modal from '../elements/Modal';
+import Input from '../elements/Input';
+import ContactForm3 from '../elements/ContactForm3';
 
 
-//import ContactForm from '../elements/ContactForm';
-
+//require('dotenv').config();
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -33,6 +33,7 @@ class HeroSplit extends React.Component {
     e.preventDefault();
     this.setState({ videoModalActive: false });
   }  
+
 
   render() {
 
@@ -97,33 +98,10 @@ class HeroSplit extends React.Component {
                   <p className="mt-0 mb-32">
                     Custom AI solutions tailored to your business needs.
                   </p>
-
-                </div>
-                <div>
-\
-                </div>
-                
-                <div className="hero-figure split-item-image split-item-image-fill illustration-element-01 reveal-from-bottom">
-                  <a
-                    data-video="https://player.vimeo.com/video/174002812"
-                    href="#0"
-                    aria-controls="video-modal"
-                    onClick={this.openVideoModal}
-                  >
-                    <Image
-                      src={require('./../../assets/images/video-placeholder.jpg')}
-                      alt="Hero"
-                      width={528}
-                      height={396} />
-                  </a>
-                </div>
-                <Modal
-                  id="video-modal"
-                  show={this.state.videoModalActive}
-                  handleClose={this.closeVideoModal}
-                  video="https://player.vimeo.com/video/174002812"
-                  videoTag="iframe" />
+                </div> 
+                <ContactForm3 />
               </div>
+
             </div>
           </div>
         </div>
